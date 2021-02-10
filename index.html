@@ -10,7 +10,7 @@
     <title>Ultimate Meme Editor</title>
 </head>
 
-<body>
+<body onload="getCanvas()">
     <header class="main-header flex space-between align-center">
         <div class="logo">LøMeme</div>
         <ul class="main-nav clean-list flex">
@@ -21,86 +21,88 @@
     </header>
 
 
-    <section class="search-container flex space-between align-center">
-        <form class="search-form" action="">
-            <input type="text" placeholder="Search.." name="search">
+    <section class="search-container flex space-between align-center" hidden>
+        <form class="search-form" action="" >
+            <input list="keywords" placeholder="Search.." name="search">
+            <datalist id="keywords">
+                <option value="funny">
+                <option value="men">
+            </datalist>
             <button class="clean-btn" type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <div class="key-words-container flex">
+        <div class="key-words-container flex" >
             <h1>funny</h1>
             <h5>ANIMAL</h5>
             <h2>men</h2>
             <h1>woman</h1>
-            <a href="more">more....</a>
+            <a href="more">more...</a>
         </div>
     </section>
 
-    <div class="image-gallery-container">
+    <div class="image-gallery-container" hidden>
         <div class="grid-container">
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/1.jpg" alt="">
+                <img src="img/meme-imgs-square/1.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/2.jpg" alt="">
+                <img src="img/meme-imgs-square/2.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/3.jpg" alt="">
+                <img src="img/meme-imgs-square/3.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/4.jpg" alt="">
+                <img src="img/meme-imgs-square/4.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/5.jpg" alt="">
+                <img src="img/meme-imgs-square/5.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/6.jpg" alt="">
+                <img src="img/meme-imgs-square/6.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/7.jpg" alt="">
+                <img src="img/meme-imgs-square/7.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/8.jpg" alt="">
+                <img src="img/meme-imgs-square/8.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/9.jpg" alt="">
+                <img src="img/meme-imgs-square/9.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/10.jpg" alt="">
+                <img src="img/meme-imgs-square/10.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/11.jpg" alt="">
+                <img src="img/meme-imgs-square/11.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/12.jpg" alt="">
+                <img src="img/meme-imgs-square/12.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/13.jpg" alt="">
+                <img src="img/meme-imgs-square/13.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/14.jpg" alt="">
+                <img src="img/meme-imgs-square/14.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/15.jpg" alt="">
+                <img src="img/meme-imgs-square/15.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/16.jpg" alt="">
+                <img src="img/meme-imgs-square/16.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/17.jpg" alt="">
+                <img src="img/meme-imgs-square/17.jpg" alt="">
             </div>
             <div class="gallery-item">
-                <img src="img/meme-imgs (square)/18.jpg" alt="">
+                <img src="img/meme-imgs-square/18.jpg" alt="">
             </div>
 
         </div>
 
     </div>
 
-
-
     <div class="meme-editor-container flex">
         <div class="canvas-container">
-            <canvas></canvas>
+            <canvas id="my-canvas" height="450" width="450" onclick="draw(event)" style="background-color: bisque;"></canvas> 
         </div>
 
         <!-- ("control-box" is the section containing the text line and buttons).  
@@ -113,7 +115,7 @@
 
 
     </div>
-
+    <script src="js/meme-service.js"></script>
     <script src="js/main.js"></script>
 </body>
 
