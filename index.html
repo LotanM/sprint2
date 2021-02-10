@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/control-box.css">
     <title>Ultimate Meme Editor</title>
 </head>
 
@@ -21,14 +22,17 @@
     </header>
 
 
-    <section class="search-container flex space-between align-center" >
-        <form class="search-form" action="" >
+
+    <!-- SEARCH NAV BAR -->
+
+    <section class="search-container flex space-between align-center">
+        <form class="search-form" action="">
             <input list="keywords" placeholder="Search.." name="search">
             <datalist id="keywords">
                 <option value="funny">
                 <option value="men">
             </datalist>
-            <button class="clean-btn" type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit"><i class="fa fa-search"></i></button>
         </form>
         <div class="key-words-container flex">
             <h1>funny</h1>
@@ -38,6 +42,9 @@
             <a href="more">more...</a>
         </div>
     </section>
+
+
+    <!-- IMAGES GALLERY -->
 
     <div class="image-gallery-container">
         <div class="grid-container">
@@ -100,14 +107,50 @@
 
     </div>
 
-    <div class="meme-editor-container flex">
+
+
+    <!-- MEME EDITOR MODAL -->
+
+
+    <div class="meme-editor-container flex space-between">
+
         <div class="canvas-container">
-            <canvas id="my-canvas" height="450" width="450" style="background-color: bisque;"></canvas> 
+            <canvas id="my-canvas" height="450" width="450" style="background-color: bisque;"></canvas>
         </div>
-        <!-- ("control-box" is the section containing the text line and buttons).  
-        TIP: you will need to keep the x,y of the lines -->
+
+
         <div class="control-box">
             <input id="text-input" type="text">
+            <br>
+            <button class="btn add-btn" onclick="myFunction()"><img src="icons/add.png" alt=""></button>
+            <button class="btn delete-btn" onclick="myFunction()"><img src="icons/trash.png" alt=""></button>
+            <button class="btn up-down-btn" onclick="myFunction()"><img src="icons/up-and-down-arrows.png"
+                    alt=""></button>
+            <br>
+            <button class="btn decrease-btn" onclick="myFunction()"><img src="icons/decrease-font.png" alt=""></button>
+            <button class="btn increase-btn" onclick="myFunction()"><img src="icons/increase-font.png" alt=""></button>
+            <button class="btn aleft-btn" onclick="myFunction()"><img src="icons/align-to-left.png" alt=""></button>
+            <button class="btn acenter-btn" onclick="myFunction()"><img src="icons/center-text-alignment.png"
+                    alt=""></button>
+            <button class="btn aright-btn" onclick="myFunction()"><img src="icons/align-to-right.png" alt=""></button>
+            <br>
+            <form class="font-select-form" action="">
+                <input list="fonts">
+                <datalist id="fonts">
+                    <option value="Impact">
+                    <option value="Ariel">
+                </datalist>
+            </form>
+
+            <button class="btn stroke-btn" onclick="myFunction()"><img src="icons/text-stroke.png" alt=""></button>
+            <button class="btn color-btn" onclick="myFunction()"><img src="icons/color-board.png" alt=""></button>
+
+            <div class="stickers-container"></div>
+
+            <button class="btn share-btn" onclick="myFunction()">Share</button>
+
+            <button class="btn download-btn" onclick="myFunction()">Download</button>
+
         </div>
 
 
@@ -116,6 +159,7 @@
 
 
     </div>
+    <script src="js/meme-main.js"></script>
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>
 </body>

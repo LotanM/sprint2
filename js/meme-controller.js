@@ -1,8 +1,6 @@
 'use strict'
 var gElCanvas, gCtx;
 
-
-
 function init() {
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
@@ -24,7 +22,6 @@ function drawCanvas() {
     clearCanvas()
     drawTxt(text)
     window.addEventListener("keyup", drawCanvas, true);
-    console.log('text:', text)
 }
 
 

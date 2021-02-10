@@ -1,4 +1,5 @@
 /* FONTS */
+
 /* 
 @font-face {
     font-family: impact;
@@ -40,7 +41,9 @@ body {
 .gallery-item {
     cursor: pointer;
     transition: .1s;
-}.gallery-item:hover {
+}
+
+.gallery-item:hover {
     opacity: 0.4;
 }
 
@@ -50,24 +53,20 @@ img {
     border-radius: 20px;
 }
 
-button {
-    width: 20px;
-    height: 20px;
-}
-
 .meme-editor-container {
     margin: 0 auto;
     width: 900px;
     border: solid 1px black;
 }
-/* .search-container {
-    
-} */
 
 .key-words-container>* {
     padding: 0;
     margin-right: 100px;
     cursor: pointer;
+}
+
+.control-box {
+    width: 400px;
 }
 
 /* HELPERS */
@@ -78,11 +77,12 @@ button {
     list-style-type: none;
 }
 
-.clean-btn {
+button {
     cursor: pointer;
     background-color: none;
     border: none;
     background-color: transparent;
+    padding: 6px;
 }
 
 .flex {

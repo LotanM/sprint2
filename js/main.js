@@ -1,6 +1,6 @@
 'use strict'
 
-function renderImgs() {
+function renderGallery() {
     var strHTML = '';
 
     // <div class="gallery-item">
