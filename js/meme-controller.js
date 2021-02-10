@@ -1,27 +1,39 @@
 'use strict'
 var gElCanvas, gCtx;
+var gClickedImgUrl;
 
 function init() {
+    renderGallery()
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
-    drawCanvas()
-    drawImg()
+    txtListener()
+}
+
+
+function renderGallery() {
+    var gallery = gImgs
+    var strHtmls = gallery.map(function (img) {
+        return `<div class="gallery-item">
+        <img src=${img.url} onclick="openMemeEditor('${img.url}')" alt="">
+    </div>`
+    })
+    document.querySelector('.grid-container').innerHTML = strHtmls.join('');
 }
 
 
 
-function drawImg() {
+function drawImg(imgUrl) {
     const img = new Image()
-    img.src = gImgs[2].url;
+    img.src = imgUrl
     gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
 }
 
 
-function drawCanvas() {
+function txtListener() {
     var text = document.getElementById('text-input').value
     clearCanvas()
     drawTxt(text)
-    window.addEventListener("keyup", drawCanvas, true);
+    window.addEventListener("keyup", txtListener, true);
 }
 
 
@@ -46,29 +58,23 @@ function drawTxt(text) {
 
 
 
-function openMemeEditor() {
-    var elSearchContainer = document.querySelector('.search-container');
-    elSearchContainer.style.display = 'none'
-    var elGallery = document.querySelector('.image-gallery-container');
-    elGallery.style.display = 'none'
-    drawCanvas()
-    var elEditor = document.querySelector('.meme-editor-container')
-    elEditor.style.display = 'block'
+function openMemeEditor(imgUrl) {
+    gClickedImgUrl = imgUrl;
+    drawImg(gClickedImgUrl);
+    document.querySelector('.search-container').style.display = 'none'
+    document.querySelector('.image-gallery-container').style.display = 'none'
+    txtListener()
+    document.querySelector('.meme-editor-container').style.display = 'flex'
 }
 
 function closeMemeEditor() {
-    var elSearchContainer = document.querySelector('.search-container');
-    elSearchContainer.style.display = 'block'
-    var elGallery = document.querySelector('.image-gallery-container');
-    elGallery.style.display = 'block'
+    document.querySelector('.search-container').style.display = 'flex'
+    document.querySelector('.image-gallery-container').style.display = 'block'
     clearCanvas()
-    var elEditor = document.querySelector('.meme-editor-container')
-    elEditor.style.display = 'none'
+    document.querySelector('.meme-editor-container').style.display = 'none'
 }
-
-
 
 function clearCanvas() {
     gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
-    drawImg()
+    drawImg(gClickedImgUrl)
 }

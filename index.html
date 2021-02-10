@@ -15,9 +15,9 @@
     <header class="main-header flex space-between align-center">
         <div class="logo">LøMeme</div>
         <ul class="main-nav clean-list flex">
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">My Memes</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#" onclick="closeMemeEditor()">Gallery</a></li>
+            <li><a href="#" onclick="closeMemeEditor()">My Memes</a></li>
+            <li><a href="#" onclick="closeMemeEditor()">About</a></li>
         </ul>
     </header>
 
@@ -48,16 +48,16 @@
 
     <div class="image-gallery-container">
         <div class="grid-container">
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/1.jpg" alt="">
+            <!-- <div class="gallery-item">
+                <img src="img/meme-imgs-square/1.jpg" onclick="openMemeEditor()" alt="">
             </div>
             <div class="gallery-item">
                 <img src="img/meme-imgs-square/2.jpg" alt="">
             </div>
             <div class="gallery-item">
                 <img src="img/meme-imgs-square/3.jpg" alt="">
-            </div>
-            <div class="gallery-item">
+            </div> -->
+            <!-- <div class="gallery-item">
                 <img src="img/meme-imgs-square/4.jpg" alt="">
             </div>
             <div class="gallery-item">
@@ -101,7 +101,7 @@
             </div>
             <div class="gallery-item">
                 <img src="img/meme-imgs-square/18.jpg" alt="">
-            </div>
+            </div> -->
 
         </div>
 
@@ -118,21 +118,20 @@
             <canvas id="my-canvas" height="450" width="450" style="background-color: bisque;"></canvas>
         </div>
 
-
         <div class="control-box">
             <input id="text-input" type="text">
             <br>
-            <button class="btn add-btn" onclick="myFunction()"><img src="icons/add.png" alt=""></button>
-            <button class="btn delete-btn" onclick="myFunction()"><img src="icons/trash.png" alt=""></button>
-            <button class="btn up-down-btn" onclick="myFunction()"><img src="icons/up-and-down-arrows.png"
+            <button class="btn add-btn" onclick="noFuncYet()"><img src="icons/add.png" alt=""></button>
+            <button class="btn delete-btn" onclick="noFuncYet()"><img src="icons/trash.png" alt=""></button>
+            <button class="btn up-down-btn" onclick="noFuncYet()"><img src="icons/up-and-down-arrows.png"
                     alt=""></button>
             <br>
-            <button class="btn decrease-btn" onclick="myFunction()"><img src="icons/decrease-font.png" alt=""></button>
-            <button class="btn increase-btn" onclick="myFunction()"><img src="icons/increase-font.png" alt=""></button>
-            <button class="btn aleft-btn" onclick="myFunction()"><img src="icons/align-to-left.png" alt=""></button>
-            <button class="btn acenter-btn" onclick="myFunction()"><img src="icons/center-text-alignment.png"
+            <button class="btn decrease-btn" onclick="noFuncYet()"><img src="icons/decrease-font.png" alt=""></button>
+            <button class="btn increase-btn" onclick="noFuncYet()"><img src="icons/increase-font.png" alt=""></button>
+            <button class="btn aleft-btn" onclick="noFuncYet()"><img src="icons/align-to-left.png" alt=""></button>
+            <button class="btn acenter-btn" onclick="noFuncYet()"><img src="icons/center-text-alignment.png"
                     alt=""></button>
-            <button class="btn aright-btn" onclick="myFunction()"><img src="icons/align-to-right.png" alt=""></button>
+            <button class="btn aright-btn" onclick="noFuncYet()"><img src="icons/align-to-right.png" alt=""></button>
             <br>
             <form class="font-select-form" action="">
                 <input list="fonts">
@@ -142,14 +141,14 @@
                 </datalist>
             </form>
 
-            <button class="btn stroke-btn" onclick="myFunction()"><img src="icons/text-stroke.png" alt=""></button>
-            <button class="btn color-btn" onclick="myFunction()"><img src="icons/color-board.png" alt=""></button>
+            <button class="btn stroke-btn" onclick="noFuncYet()"><img src="icons/text-stroke.png" alt=""></button>
+            <button class="btn color-btn" onclick="noFuncYet()"><img src="icons/color-board.png" alt=""></button>
 
             <div class="stickers-container"></div>
 
-            <button class="btn share-btn" onclick="myFunction()">Share</button>
+            <button class="btn share-btn" onclick="noFuncYet()">Share</button>
 
-            <button class="btn download-btn" onclick="myFunction()">Download</button>
+            <button class="btn download-btn" onclick="noFuncYet()">Download</button>
 
         </div>
 
@@ -159,7 +158,6 @@
 
 
     </div>
-    <script src="js/meme-main.js"></script>
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>
 </body>
