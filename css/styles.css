@@ -1,0 +1,93 @@
+/* FONTS */
+/* 
+@font-face {
+    font-family: impact;
+    src: url(../fonts/impact/impact.ttf);
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+.main-header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 60px;
+}
+
+.logo {
+    font-size: 40px;
+}
+
+.main-nav>* {
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 10px
+}
+
+.gallery-item {
+    cursor: pointer;
+    transition: .1s;
+}.gallery-item:hover {
+    opacity: 0.4;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+button {
+    width: 20px;
+    height: 20px;
+}
+
+/* .search-container {
+    
+} */
+
+.key-words-container>* {
+    padding: 0;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+/* HELPERS */
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.clean-btn {
+    cursor: pointer;
+    background-color: none;
+    border: none;
+    background-color: transparent;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.align-center {
+    align-items: center;
+}
