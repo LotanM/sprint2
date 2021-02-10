@@ -38,6 +38,4 @@ var gMeme = {
 }
 
 
-function addTxt() {
 
-}

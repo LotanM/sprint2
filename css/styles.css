@@ -55,6 +55,11 @@ button {
     height: 20px;
 }
 
+.meme-editor-container {
+    margin: 0 auto;
+    width: 900px;
+    border: solid 1px black;
+}
 /* .search-container {
     
 } */
@@ -90,4 +95,8 @@ button {
 
 .flex.align-center {
     align-items: center;
+}
+
+.search-container, .image-gallery-container {
+    display: none;
 }

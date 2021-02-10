@@ -10,7 +10,7 @@
     <title>Ultimate Meme Editor</title>
 </head>
 
-<body onload="getCanvas()">
+<body onload="init()">
     <header class="main-header flex space-between align-center">
         <div class="logo">LøMeme</div>
         <ul class="main-nav clean-list flex">
@@ -21,7 +21,7 @@
     </header>
 
 
-    <section class="search-container flex space-between align-center" hidden>
+    <section class="search-container flex space-between align-center" >
         <form class="search-form" action="" >
             <input list="keywords" placeholder="Search.." name="search">
             <datalist id="keywords">
@@ -30,7 +30,7 @@
             </datalist>
             <button class="clean-btn" type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <div class="key-words-container flex" >
+        <div class="key-words-container flex">
             <h1>funny</h1>
             <h5>ANIMAL</h5>
             <h2>men</h2>
@@ -39,7 +39,7 @@
         </div>
     </section>
 
-    <div class="image-gallery-container" hidden>
+    <div class="image-gallery-container">
         <div class="grid-container">
             <div class="gallery-item">
                 <img src="img/meme-imgs-square/1.jpg" alt="">
@@ -102,12 +102,13 @@
 
     <div class="meme-editor-container flex">
         <div class="canvas-container">
-            <canvas id="my-canvas" height="450" width="450" onclick="draw(event)" style="background-color: bisque;"></canvas> 
+            <canvas id="my-canvas" height="450" width="450" style="background-color: bisque;"></canvas> 
         </div>
-
         <!-- ("control-box" is the section containing the text line and buttons).  
         TIP: you will need to keep the x,y of the lines -->
-        <div class="control-box"></div>
+        <div class="control-box">
+            <input id="text-input" type="text">
+        </div>
 
 
 
@@ -116,7 +117,7 @@
 
     </div>
     <script src="js/meme-service.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/meme-controller.js"></script>
 </body>
 
 </html>
