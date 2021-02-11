@@ -1,11 +1,15 @@
 'use strict'
 let gElCanvas, gCtx, gClickedImgUrl, gCurrLineIdx;
 
+
+
+
 function init() {
     renderGallery()
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
     addKeyListener()
+
 }
 
 
@@ -29,7 +33,7 @@ function drawImg(gClickedImgUrl) {
 
 
 
-function showDefaultTxt(imgId) {
+function showDefaultTxt() {
     var text = gMeme.lines[0].txt
     drawTxt(text)
 }
@@ -39,7 +43,7 @@ function renderMemeEditor(imgUrl, imgId) {
     gClickedImgUrl = imgUrl
     openEditorModal()
     drawImg(gClickedImgUrl)
-    showDefaultTxt(imgId)
+    showDefaultTxt()
 }
 
 

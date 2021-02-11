@@ -1,10 +1,6 @@
 /* FONTS */
 
-/* 
-@font-face {
-    font-family: impact;
-    src: url(../fonts/impact/impact.ttf);
-} */
+
 
 * {
     box-sizing: border-box;
@@ -78,7 +74,7 @@ button {
     background-color: none;
     border: none;
     background-color: transparent;
-    padding: 6px;
+    padding: 5px;
 }
 
 .flex {
