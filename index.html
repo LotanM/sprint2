@@ -15,9 +15,9 @@
     <header class="main-header flex space-between align-center">
         <div class="logo">LøMeme</div>
         <ul class="main-nav clean-list flex">
-            <li><a href="#" onclick="closeMemeEditor()">Gallery</a></li>
-            <li><a href="#" onclick="closeMemeEditor()">My Memes</a></li>
-            <li><a href="#" onclick="closeMemeEditor()">About</a></li>
+            <li><a href="#" onclick="closeEditorModal()">Gallery</a></li>
+            <li><a href="#" onclick="closeEditorModal()">My Memes</a></li>
+            <li><a href="#" onclick="closeEditorModal()">About</a></li>
         </ul>
     </header>
 
@@ -48,61 +48,6 @@
 
     <div class="image-gallery-container">
         <div class="grid-container">
-            <!-- <div class="gallery-item">
-                <img src="img/meme-imgs-square/1.jpg" onclick="openMemeEditor()" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/2.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/3.jpg" alt="">
-            </div> -->
-            <!-- <div class="gallery-item">
-                <img src="img/meme-imgs-square/4.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/5.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/6.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/7.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/8.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/9.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/10.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/11.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/12.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/13.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/14.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/15.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/16.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/17.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/meme-imgs-square/18.jpg" alt="">
-            </div> -->
-
         </div>
 
     </div>
@@ -119,15 +64,19 @@
         </div>
 
         <div class="control-box">
-            <input id="text-input" type="text">
+            <input id="text-input" type="text" value="Put your text here">
             <br>
             <button class="btn add-btn" onclick="noFuncYet()"><img src="icons/add.png" alt=""></button>
             <button class="btn delete-btn" onclick="noFuncYet()"><img src="icons/trash.png" alt=""></button>
-            <button class="btn up-down-btn" onclick="noFuncYet()"><img src="icons/up-and-down-arrows.png"
+            <button class="btn up-down-btn" onclick="moveTxtDown()"><img src="icons/down-arrow.png"
+                    alt=""></button>
+            <button class="btn up-down-btn" onclick="moveTxtUp()"><img src="icons/up-arrow.png"
                     alt=""></button>
             <br>
-            <button class="btn decrease-btn" onclick="noFuncYet()"><img src="icons/decrease-font.png" alt=""></button>
-            <button class="btn increase-btn" onclick="noFuncYet()"><img src="icons/increase-font.png" alt=""></button>
+            <button class="btn decrease-btn" onclick="decreaseFontSize()"><img src="icons/decrease-font.png"
+                    alt=""></button>
+            <button class="btn increase-btn" onclick="increaseFontSize()"><img src="icons/increase-font.png"
+                    alt=""></button>
             <button class="btn aleft-btn" onclick="noFuncYet()"><img src="icons/align-to-left.png" alt=""></button>
             <button class="btn acenter-btn" onclick="noFuncYet()"><img src="icons/center-text-alignment.png"
                     alt=""></button>
@@ -159,6 +108,7 @@
 
     </div>
     <script src="js/meme-service.js"></script>
+    <script src="js/buttons-controller.js"></script>
     <script src="js/meme-controller.js"></script>
 </body>
 

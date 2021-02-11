@@ -1,4 +1,5 @@
 'use strict'
+
 var gId = 1;
 var gImgs;
 
@@ -7,6 +8,21 @@ var gKeywords = {
     'funny': 1,
     'animal': 1,
     'men': 1
+}
+
+var gMeme = {
+    selectedImgId: 1,
+    selectedLineIdx: 0,
+    lines: [
+        {
+            txt: 'Put your text here',
+            size: 50,
+            align: 'center',
+            color: 'black',
+            font: 'Impact',
+            pos: { x: 220, y: 100 }
+        }
+    ]
 }
 
 var gImgs = [{
@@ -21,47 +37,24 @@ var gImgs = [{
     id: 3,
     url: `img/meme-imgs-square/3.jpg`,
     keywords: ['animal', 'funny']
+}, {
+    id: 4,
+    url: `img/meme-imgs-square/4.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 5,
+    url: `img/meme-imgs-square/5.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 6,
+    url: `img/meme-imgs-square/6.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 7,
+    url: `img/meme-imgs-square/7.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 8,
+    url: `img/meme-imgs-square/8.jpg`,
+    keywords: ['animal', 'funny']
 }]
-
-
-var gMeme = {
-    selectedImgId: 1,
-    selectedLineIdx: 0,
-    lines: [
-        {
-            txt: 'I never eat Falafel',
-            size: 40,
-            align: 'left',
-            color: 'black',
-            font: 'Impact'
-        }
-    ]
-}
-
-
-
-function _createImg() {
-    return {
-        id: gId++,
-        url: getImgUrl(),
-        keywords: ['animal', 'funny']
-    }
-}
-
-function _createImgs() {
-    var imgs = []
-    for (let i = 0; i < 18; i++) {
-        imgs.push(_createImg())
-    }
-    gImgs = imgs;
-}
-
-function getImgUrl() {
-    return `<img src="./img/meme-imgs-square/${gId}.jpg">`
-}
-
-// function makeId() {
-//     var txt = '';
-//     txt = gId++;
-//     return gId
-// }
