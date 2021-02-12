@@ -5,7 +5,6 @@ function increaseFontSize() {
     updateTxtLine()
 }
 
-
 function decreaseFontSize() {
     gMeme.lines[gMeme.selectedLineIdx].size--
     updateTxtLine()
@@ -21,8 +20,19 @@ function moveTxtDown() {
     updateTxtLine()
 }
 
-function addLineInput() {
-    // var baseElement = document.querySelector('.control-box');
-    var strHtml = '<input class="control-box-input" id="text-input" type="text" value="Put your text here">'
-    document.querySelector('.control-box .txt-inputs-container').innerHTML += strHtml;
+function alignTxt(el) {
+    console.log(el.className);
+    if(el.className === 'btn aleft') gMeme.lines[gMeme.selectedLineIdx].pos.x -= 30
+    else if(el.className === 'btn acenter') gMeme.lines[gMeme.selectedLineIdx].pos.x = 220
+    else if(el.className === 'btn aright') gMeme.lines[gMeme.selectedLineIdx].pos.x += 30
+    updateTxtLine()
+}
+
+
+function shareMeme() {
+    
+}
+
+function downloadMeme() {
+
 }

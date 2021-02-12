@@ -8,8 +8,9 @@
     display: none;
 }
 
-.control-box-input {
+.input {
     height: 30px;
+    margin-bottom: 5px;
 }
 
 .btn {

@@ -23,6 +23,7 @@
 
 
 
+
     <!-- SEARCH NAV BAR -->
 
     <section class="search-container flex space-between align-center">
@@ -65,24 +66,23 @@
 
         <div class="control-box">
             <div class="txt-inputs-container">
-                <input class="control-box-input" id="text-input" type="text" value="Put your text here">
+                <input class="text-input" id="0" type="text" oninput="txtChangeListener(this)">
+                <input class="text-input" id="1" type="text" oninput="txtChangeListener(this)">
                 <br>
             </div>
-            <button class="btn add-btn" onclick="addLineInput()"><img src="icons/add.png" alt=""></button>
-            <button class="btn delete-btn" onclick="noFuncYet()"><img src="icons/trash.png" alt=""></button>
-            <button class="btn up-down-btn" onclick="moveTxtDown()"><img src="icons/down-arrow.png"
-                    alt=""></button>
-            <button class="btn up-down-btn" onclick="moveTxtUp()"><img src="icons/up-arrow.png"
-                    alt=""></button>
+            <button class="btn add-btn" onclick="addInput()"><img src="icons/add.png" alt=""></button>
+            <button class="btn delete-btn" onclick="deleteInput()"><img src="icons/trash.png" alt=""></button>
+            <button class="btn up-down-btn" onclick="moveTxtDown()"><img src="icons/down-arrow.png" alt=""></button>
+            <button class="btn up-down-btn" onclick="moveTxtUp()"><img src="icons/up-arrow.png" alt=""></button>
             <br>
             <button class="btn decrease-btn" onclick="decreaseFontSize()"><img src="icons/decrease-font.png"
                     alt=""></button>
             <button class="btn increase-btn" onclick="increaseFontSize()"><img src="icons/increase-font.png"
                     alt=""></button>
-            <button class="btn aleft-btn" onclick="noFuncYet()"><img src="icons/align-to-left.png" alt=""></button>
-            <button class="btn acenter-btn" onclick="noFuncYet()"><img src="icons/center-text-alignment.png"
+            <button class="btn aleft" onclick="alignTxt(this)"><img src="icons/align-to-left.png" alt=""></button>
+            <button class="btn acenter" onclick="alignTxt(this)"><img src="icons/center-text-alignment.png"
                     alt=""></button>
-            <button class="btn aright-btn" onclick="noFuncYet()"><img src="icons/align-to-right.png" alt=""></button>
+            <button class="btn aright" onclick="alignTxt(this)"><img src="icons/align-to-right.png" alt=""></button>
             <br>
             <form class="font-select-form" action="">
                 <input list="fonts">
@@ -97,18 +97,14 @@
 
             <div class="stickers-container"></div>
 
-            <button class="btn share-btn" onclick="noFuncYet()">Share</button>
+            <button class="btn share-btn" onclick="shareMeme()">Share</button>
 
-            <button class="btn download-btn" onclick="noFuncYet()">Download</button>
+            <button class="btn download-btn" onclick="downloadMeme()">Download</button>
 
         </div>
-
-
-
-
-
-
     </div>
+
+
     <script src="js/meme-service.js"></script>
     <script src="js/buttons-controller.js"></script>
     <script src="js/meme-controller.js"></script>

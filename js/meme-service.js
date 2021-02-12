@@ -57,4 +57,61 @@ var gImgs = [{
     id: 8,
     url: `img/meme-imgs-square/8.jpg`,
     keywords: ['animal', 'funny']
+}, {
+    id: 9,
+    url: `img/meme-imgs-square/9.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 10,
+    url: `img/meme-imgs-square/10.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 11,
+    url: `img/meme-imgs-square/11.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 12,
+    url: `img/meme-imgs-square/12.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 13,
+    url: `img/meme-imgs-square/13.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 14,
+    url: `img/meme-imgs-square/14.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 15,
+    url: `img/meme-imgs-square/15.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 16,
+    url: `img/meme-imgs-square/16.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 17,
+    url: `img/meme-imgs-square/17.jpg`,
+    keywords: ['animal', 'funny']
+}, {
+    id: 18,
+    url: `img/meme-imgs-square/18.jpg`,
+    keywords: ['animal', 'funny']
 }]
+
+
+function createNewLine() {
+    let y = gMeme.lines[gMeme.selectedLineIdx].pos.y
+    y += 100
+    gCurrLineIdx++
+    gMeme.lines.push(
+        {
+            txt: 'Put your text here',
+            size: 50,
+            align: 'center',
+            color: 'black',
+            font: 'Impact',
+            pos: { x: 220, y: y }
+        }
+    )
+}

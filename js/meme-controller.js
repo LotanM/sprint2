@@ -1,15 +1,11 @@
 'use strict'
-let gElCanvas, gCtx, gClickedImgUrl, gCurrLineIdx;
-
-
-
+let gElCanvas, gCtx, gClickedImgUrl;
+let gCurrLineIdx = 0;
 
 function init() {
     renderGallery()
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
-    addKeyListener()
-
 }
 
 
@@ -17,8 +13,7 @@ function renderGallery() {
     var gallery = gImgs
     var strHtmls = gallery.map(function (img) {
         return `<div class="gallery-item">
-        <img src=${img.url} onclick="renderMemeEditor('${img.url}', ${img.id})" alt="">
-    </div>`
+        <img src=${img.url} onclick="renderMemeEditor('${img.url}', ${img.id})" alt=""></div>`
     })
     document.querySelector('.grid-container').innerHTML = strHtmls.join('');
 }
@@ -33,17 +28,13 @@ function drawImg(gClickedImgUrl) {
 
 
 
-function showDefaultTxt() {
-    var text = gMeme.lines[0].txt
-    drawTxt(text)
-}
+
 
 function renderMemeEditor(imgUrl, imgId) {
     gMeme.selectedImgId = imgId
     gClickedImgUrl = imgUrl
     openEditorModal()
     drawImg(gClickedImgUrl)
-    showDefaultTxt()
 }
 
 
@@ -66,15 +57,25 @@ function clearCanvas() {
 }
 
 
+function txtChangeListener(elInput) {
+    console.log('txtChangeListener:')
+    console.log('elInput.id:', elInput.id)
+    var text = elInput.value;
+    if (elInput.id === '0') {
+        console.log('this is first input');
+    }
+    clearCanvas()
+    drawTxt(text)
+}
 
 
 function updateTxtLine() {
-    var elInputValue = document.getElementById('text-input').value
-    gMeme.lines[gCurrLineIdx].txt = elInputValue
+    var elInputValue = document.querySelector('.text-input').value
     clearCanvas()
     drawTxt(elInputValue)
-    addKeyListener()
+    gMeme.lines[gCurrLineIdx].txt = elInputValue
 }
+
 
 function drawTxt(text) {
     gCurrLineIdx = gMeme.selectedLineIdx
@@ -91,8 +92,4 @@ function drawTxt(text) {
     gCtx.textAlign = align
     gCtx.fillText(text, x, y)
     gCtx.strokeText(text, x, y)
-}
-
-function addKeyListener() {
-    window.addEventListener("keyup", updateTxtLine, true);
 }
