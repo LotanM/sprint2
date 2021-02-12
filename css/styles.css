@@ -49,6 +49,8 @@ img {
     border-radius: 20px;
 }
 
+
+
 .meme-editor-container {
     margin: 0 auto;
     width: 900px;
@@ -67,6 +69,7 @@ img {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    cursor: pointer;
 }
 
 button {

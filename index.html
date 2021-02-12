@@ -15,9 +15,9 @@
     <header class="main-header flex space-between align-center">
         <div class="logo">LøMeme</div>
         <ul class="main-nav clean-list flex">
-            <li><a href="#" onclick="closeEditorModal()">Gallery</a></li>
-            <li><a href="#" onclick="closeEditorModal()">My Memes</a></li>
-            <li><a href="#" onclick="closeEditorModal()">About</a></li>
+            <li><a class="gallery" href="#" onclick="renderModals(this)">Gallery</a></li>
+            <li><a class="my-memes" href="#" onclick="renderModals(this)">My Memes</a></li>
+            <li><a class="about" href="#" onclick="renderModals(this)">About</a></li>
         </ul>
     </header>
 
@@ -50,10 +50,24 @@
     <div class="image-gallery-container">
         <div class="grid-container">
         </div>
+    </div>
+
+
+    <!-- MY MEMES MODAL -->
+
+    <div class="my-memes-container">
+        <div class="grid-container">
+            <div>my</div>
+            <div>memes</div>
+        </div>
 
     </div>
 
 
+    <!-- ABOUT MODAL -->
+    <div class="about-container">
+        <h1>About!</h1>
+    </div>
 
     <!-- MEME EDITOR MODAL -->
 

@@ -34,5 +34,6 @@ function shareMeme() {
 }
 
 function downloadMeme() {
-
+    gMemes
+    _saveMemesToStorage()
 }

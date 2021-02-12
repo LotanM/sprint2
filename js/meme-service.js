@@ -2,6 +2,8 @@
 
 var gId = 1;
 var gImgs;
+var gMemes;
+const KEY = 'memes';
 
 var gKeywords = {
     'happy': 0,
@@ -114,4 +116,8 @@ function createNewLine() {
             pos: { x: 220, y: y }
         }
     )
+}
+
+function _saveMemesToStorage() {
+    saveToStorage(KEY, gMemes)
 }

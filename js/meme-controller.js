@@ -38,17 +38,26 @@ function renderMemeEditor(imgUrl, imgId) {
 }
 
 
-function openEditorModal() {
-    document.querySelector('.search-container').style.display = 'none'
-    document.querySelector('.image-gallery-container').style.display = 'none'
-    document.querySelector('.meme-editor-container').style.display = 'flex'
-}
 
-function closeEditorModal() {
-    document.querySelector('.search-container').style.display = 'flex'
-    document.querySelector('.image-gallery-container').style.display = 'block'
-    clearCanvas()
+function renderModals(el) {
     document.querySelector('.meme-editor-container').style.display = 'none'
+    document.querySelector('.search-container').style.display = 'flex'
+    if (el.className === 'gallery') {
+        document.querySelector('.image-gallery-container').style.display = 'block'
+        document.querySelector('.about-container').style.display = 'none'
+        document.querySelector('.my-memes-container').style.display = 'none'
+    }
+    else if (el.className === 'my-memes') {
+        document.querySelector('.my-memes-container').style.display = 'block'
+        document.querySelector('.image-gallery-container').style.display = 'none'
+        document.querySelector('.about-container').style.display = 'none'
+    }
+    else if (el.className === 'about') {
+        document.querySelector('.about-container').style.display = 'block'
+        document.querySelector('.my-memes-container').style.display = 'none'
+        document.querySelector('.image-gallery-container').style.display = 'none'
+    }
+    clearCanvas()
 }
 
 function clearCanvas() {
