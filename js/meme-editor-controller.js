@@ -14,11 +14,7 @@ function renderMemeEditor(imgUrl, imgId) {
     drawImg(gClickedImgUrl)
 }
 
-function openEditorModal() {
-    document.querySelector('.search-container').style.display = 'none'
-    document.querySelector('.image-gallery-container').style.display = 'none'
-    document.querySelector('.meme-editor-container').style.display = 'flex'
-}
+
 
 
 function clearCanvas() {

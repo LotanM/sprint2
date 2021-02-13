@@ -1,11 +1,11 @@
 .control-box {
-    width: 400px;
-    margin-top: 50px;
+    width: 450px;
+    padding: 50px 0;
+    margin-left: 30px;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.meme-editor-container {
-    display: none;
+    background-color: #40404d;
+    border-radius: 30px;
+    min-width: 300px;
 }
 
 input {
@@ -14,18 +14,17 @@ input {
     margin-bottom: 5px;
 }
 
-.text-input {
-    margin-left: 70px;
-    width: 250px;
-}
-
 .btn {
-    width: 40px;
-    height: 40px;
+    font-size: 30px;
     border-radius: 5px;
     color: white;
     text-decoration: none;
     cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    color: rgb(39, 39, 138)
 }
 
 .control-box>* {
@@ -33,21 +32,37 @@ input {
     border-radius: 5px;
 }
 
+.btns-container {
+    width: 90%;
+}
+
 .txt-inputs-container {
     margin: 5px;
     border-radius: 5px;
-    width: 100px;
+    width: 90%;
 }
 
-.share-btn, .download-btn {
-    width: 100px;
+.text-input {
+    width: 90%;
+}
+
+.download-btn {
     text-align: center;
+    margin-top: auto;
+    border: white solid 2px;
+    padding: 5px 10px;
 }
 
-.selected {
-    background-color: rgb(177, 175, 175);
+.stroke {
+    color: grey;
 }
 
 .font-select-form {
     display: inline;
+}
+
+@media (max-width: 740px) {
+    .control-box {
+        margin-left: 0;
+    }
 }

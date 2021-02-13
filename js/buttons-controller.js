@@ -50,7 +50,7 @@ function renderInputs() {
 }
 
 function toggleStroke(elBtn) {
-    elBtn.classList.toggle('selected')
+    elBtn.classList.toggle('stroke')
     if (gMeme.lines[gMeme.selectedLineIdx].stroke === 'white') gMeme.lines[gMeme.selectedLineIdx].stroke = 'transparent'
     else gMeme.lines[gMeme.selectedLineIdx].stroke = 'white'
     drawTxts()
@@ -66,9 +66,6 @@ function setCurrInput(currIdx) {
     gMeme.selectedLineIdx = currIdx
 }
 
-function shareMeme() {
-
-}
 
 function downloadMeme(elLink) {
     var imgContent = gElCanvas.toDataURL()

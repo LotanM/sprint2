@@ -19,35 +19,11 @@
                 <ul class="main-nav clean-list flex align-center">
                     <li><a class="gallery" href="#" onclick="renderModals(this)">Gallery</a></li>
                     <li><a class="my-memes" href="#" onclick="renderModals(this)">My Memes</a></li>
-                    <li><a class="about" href="#" onclick="renderModals(this)">About</a></li>
                 </ul>
                 <button class="toggle-menu-btn" onclick="toggleMenu()" alt="Open main menu"><img src="./icons/menu.png" alt=""></button>
                 <div class="toggle-menu-screen screen" onclick="toggleMenu()" alt="toggle main menu"></div>
             </nav>
-
-
     </header>
-
-
-    <!-- SEARCH BAR-->
-
-    <section class="search-container flex space-between align-center">
-        <form class="search-form" action="">
-            <input list="keywords" placeholder="Search.." name="search">
-            <datalist id="keywords">
-                <option value="funny">
-                <option value="men">
-            </datalist>
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        <div class="key-words-container flex">
-            <h1>funny</h1>
-            <h5>ANIMAL</h5>
-            <h2>men</h2>
-            <h1>woman</h1>
-            <a href="more">more...</a>
-        </div>
-    </section>
 
 
     <!-- IMAGES GALLERY -->
@@ -68,61 +44,35 @@
 
     </div>
 
-
-    <!-- ABOUT MODAL -->
-    <div class="about-container">
-        <h1>About!</h1>
-    </div>
-
     <!-- MEME EDITOR MODAL -->
 
-
-    <div class="meme-editor-container flex space-between">
-
+    <div class="meme-editor-container space-between ">
         <div class="canvas-container">
-            <canvas id="my-canvas" height="450" width="450" style="background-color: bisque;"></canvas>
+            <canvas id="my-canvas" height="450" width="450"></canvas>
         </div>
 
-        <div class="control-box">
+        <div class="control-box flex align-center column">
             <div class="txt-inputs-container">
                 <input class="text-input" type="text" oninput="updateTxtLine(this.value)" onfocus="setCurrInput(0)">
                 <input class="text-input" type="text" oninput="updateTxtLine(this.value)" onfocus="setCurrInput(1)">
             </div>
-            <button class="btn add-btn" onclick="addNewLine()"><img src="icons/add.png" alt=""></button>
-            <button class="btn delete-btn" onclick="deleteLine()"><img src="icons/trash.png" alt=""></button>
-            <button class="btn up-down-btn" onclick="moveTxtDown()"><img src="icons/down-arrow.png" alt=""></button>
-            <button class="btn up-down-btn" onclick="moveTxtUp()"><img src="icons/up-arrow.png" alt=""></button>
+            <div class="btns-container">
+            <button class="btn add-btn" onclick="addNewLine()"><i class="fa fa-plus"></i></button>
+            <button class="btn delete-btn" onclick="deleteLine()"><i class="fa fa-trash"></i></button>
+            <button class="btn up-down-btn" onclick="moveTxtDown()"><i class="fa fa-arrow-down"></i></button>
+            <button class="btn up-down-btn" onclick="moveTxtUp()"><i class="fa fa-arrow-up"></i></button>
             <br>
-            <button class="btn decrease-btn" onclick="decreaseFontSize()"><img src="icons/decrease-font.png"
-                    alt=""></button>
-            <button class="btn increase-btn" onclick="increaseFontSize()"><img src="icons/increase-font.png"
-                    alt=""></button>
-            <button class="btn aleft" onclick="alignTxt(this)"><img src="icons/align-to-left.png" alt=""></button>
-            <button class="btn acenter" onclick="alignTxt(this)"><img src="icons/center-text-alignment.png"
-                    alt=""></button>
-            <button class="btn aright" onclick="alignTxt(this)"><img src="icons/align-to-right.png" alt=""></button>
+            <button class="btn aleft" onclick="alignTxt(this)"><i class="fa fa-align-left"></i></button>
+            <button class="btn acenter" onclick="alignTxt(this)"><i class="fa fa-align-center"></i></button>
+            <button class="btn aright" onclick="alignTxt(this)"><i class="fa fa-align-right"></i></button>
             <br>
-            <form class="font-select-form" action="">
-                <input list="fonts">
-                <datalist id="fonts">
-                    <option value="Impact">
-                    <option value="Ariel">
-                </datalist>
-            </form>
-
-            <button class="btn stroke-btn" onclick="toggleStroke(this)"><img src="icons/text-stroke.png"
-                    alt=""></button>
-            <button class="btn color-btn" onclick="noFuncYet()"><img src="icons/color-board.png" alt=""></button>
-
-            <div class="stickers-container"></div>
-
-            <button class="btn share-btn" onclick="shareMeme()">Share</button>
-
+            <button class="btn decrease-btn" onclick="decreaseFontSize()"><i class="fa fa-font"></i>-</button>
+            <button class="btn increase-btn" onclick="increaseFontSize()"><i class="fa fa-font"></i>+</button>
+            <button class="btn stroke-btn" onclick="toggleStroke(this)"><i class="fa fa-font"></i></button>
+            </div>
             <a class="btn download-btn" onclick="downloadMeme(this)">Download</a>
-
         </div>
     </div>
-
 
     <script src="js/main.js"></script>
     <script src="js/storage-service.js"></script>
