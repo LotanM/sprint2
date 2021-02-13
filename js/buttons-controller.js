@@ -30,15 +30,24 @@ function alignTxt(el) {
 
 function addNewLine() {
     createNewLine()
-    var strHtml = `<input class="text-input" type="text"
-    oninput="updateTxtLine(this.value)" value="${gMeme.lines[gMeme.lines.length - 1].txt}" onfocus="setCurrInput(${gMeme.lines.length - 1})">`
-    document.querySelector('.txt-inputs-container').innerHTML += strHtml;
-    var inputs = document.querySelectorAll('.text-input')
-    inputs.forEach((input, idx) => {
-        inputs[idx].value = gMeme.lines[idx].txt
-    })
+    renderInputs()
+    drawTxts()
 }
 
+function deleteLine() {
+    deleteSelectedLine()
+    renderInputs()
+    drawTxts()
+}
+
+function renderInputs() {
+    var strHtml = ''
+    gMeme.lines.forEach((input, idx) => {
+        strHtml += `<input class="text-input" type="text"
+        oninput="updateTxtLine(this.value)" value="${input.txt}" onfocus="setCurrInput(${idx})">`
+    })
+    document.querySelector('.txt-inputs-container').innerHTML = strHtml
+}
 
 function toggleStroke(elBtn) {
     elBtn.classList.toggle('selected')
@@ -52,12 +61,13 @@ function updateTxtLine(value) {
     drawTxts()
 }
 
+
 function setCurrInput(currIdx) {
     gMeme.selectedLineIdx = currIdx
 }
 
 function shareMeme() {
-    
+
 }
 
 function downloadMeme(elLink) {

@@ -128,6 +128,11 @@ function createNewLine() {
     )
 }
 
+function deleteSelectedLine() {
+    var lineIdx = gMeme.selectedLineIdx
+    gMeme.lines.splice(lineIdx, 1);
+}
+
 
 
 function _saveMemesToStorage() {
