@@ -8,6 +8,7 @@
 
 body {
     text-align: center;
+    background-color: indianred;
 }
 
 .main-header {
@@ -36,7 +37,7 @@ body {
 
 .gallery-item {
     cursor: pointer;
-    transition: .1s;
+    transition: .3s;
 }
 
 .gallery-item:hover {
@@ -63,7 +64,23 @@ img {
     cursor: pointer;
 }
 
+.about-container, .my-memes-container {
+    display: none;
+}
+
+
 /* HELPERS */
+a, .logo {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: .4s;
+}
+
+a:hover, .logo:hover { 
+    color: rgb(240, 185, 140);
+}
+
 
 .clean-list {
     margin: 0;

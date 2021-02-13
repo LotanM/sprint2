@@ -80,8 +80,8 @@
 
         <div class="control-box">
             <div class="txt-inputs-container">
-                <input class="text-input" id="0" type="text" oninput="txtChangeListener(this)">
-                <input class="text-input" id="1" type="text" oninput="txtChangeListener(this)">
+                <input class="text-input" id="0" type="text" oninput="updateTxtLine()">
+                <input class="text-input" id="1" type="text" oninput="updateTxtLine()">
                 <br>
             </div>
             <button class="btn add-btn" onclick="addInput()"><img src="icons/add.png" alt=""></button>
@@ -106,7 +106,7 @@
                 </datalist>
             </form>
 
-            <button class="btn stroke-btn" onclick="noFuncYet()"><img src="icons/text-stroke.png" alt=""></button>
+            <button class="btn stroke-btn" onclick="toggleStroke(this)"><img src="icons/text-stroke.png" alt=""></button>
             <button class="btn color-btn" onclick="noFuncYet()"><img src="icons/color-board.png" alt=""></button>
 
             <div class="stickers-container"></div>
@@ -118,10 +118,13 @@
         </div>
     </div>
 
-
-    <script src="js/meme-service.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/main-service.js"></script>
+    <script src="js/meme-editor-controller.js"></script>
     <script src="js/buttons-controller.js"></script>
-    <script src="js/meme-controller.js"></script>
+    <script src="js/my-memes-controller.js"></script>
 </body>
 
 </html>
