@@ -21,7 +21,7 @@
                     <li><a class="my-memes" href="#" onclick="renderModals(this)">My Memes</a></li>
                     <li><a class="about" href="#" onclick="renderModals(this)">About</a></li>
                 </ul>
-                <button class="toggle-menu-btn" onclick="toggleMenu()" alt="Open main menu"></button>
+                <button class="toggle-menu-btn" onclick="toggleMenu()" alt="Open main menu"><img src="./icons/menu.png" alt=""></button>
                 <div class="toggle-menu-screen screen" onclick="toggleMenu()" alt="toggle main menu"></div>
             </nav>
 
@@ -85,11 +85,10 @@
 
         <div class="control-box">
             <div class="txt-inputs-container">
-                <input class="text-input" id="0" type="text" oninput="updateTxtLine()">
-                <input class="text-input" id="1" type="text" oninput="updateTxtLine()">
-                <br>
+                <input class="text-input" type="text" oninput="updateTxtLine(this.value)" onfocus="setCurrInput(0)">
+                <input class="text-input" type="text" oninput="updateTxtLine(this.value)" onfocus="setCurrInput(1)">
             </div>
-            <button class="btn add-btn" onclick="addInput()"><img src="icons/add.png" alt=""></button>
+            <button class="btn add-btn" onclick="addNewLine()"><img src="icons/add.png" alt=""></button>
             <button class="btn delete-btn" onclick="deleteInput()"><img src="icons/trash.png" alt=""></button>
             <button class="btn up-down-btn" onclick="moveTxtDown()"><img src="icons/down-arrow.png" alt=""></button>
             <button class="btn up-down-btn" onclick="moveTxtUp()"><img src="icons/up-arrow.png" alt=""></button>
@@ -119,7 +118,7 @@
 
             <button class="btn share-btn" onclick="shareMeme()">Share</button>
 
-            <button class="btn download-btn" onclick="downloadMeme(this)" download="my-meme.jpg">Download</button>
+            <button class="btn download-btn" onclick="downloadMeme(this)">Download</button>
 
         </div>
     </div>

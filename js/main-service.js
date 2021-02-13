@@ -18,13 +18,22 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'Put your text here',
+            txt: 'lll',
             size: 50,
             align: 'center',
             color: 'black',
             font: 'Impact',
             stroke: 'white',
             pos: { x: 220, y: 100 }
+        },
+        {
+            txt: '',
+            size: 50,
+            align: 'center',
+            color: 'black',
+            font: 'Impact',
+            stroke: 'white',
+            pos: { x: 220, y: 150 }
         }
     ]
 }
@@ -105,21 +114,20 @@ var gImgs = [{
 
 
 function createNewLine() {
-    let y = gMeme.lines[gMeme.selectedLineIdx].pos.y
-    y += 100
-    gCurrLineIdx++
     gMeme.lines.push(
         {
-            txt: 'Put your text here',
+            txt: '',
             size: 50,
             align: 'center',
             color: 'black',
             font: 'Impact',
             stroke: 'white',
-            pos: { x: 220, y: y }
+            pos: { x: 220, y: 150 }
         }
     )
 }
+
+
 
 function _saveMemesToStorage() {
     saveToStorage(KEY, gMemes)

@@ -9,12 +9,10 @@ function init() {
     gCtx = gElCanvas.getContext('2d');
 }
 
-
 function toggleMenu() {
     var mainMenu = document.querySelector('.main-menu-wrapper');
     mainMenu.classList.toggle('open');
 }
-
 
 function renderGallery() {
     var gallery = gImgs

@@ -26,31 +26,27 @@ function clearCanvas() {
     drawImg(gClickedImgUrl)
 }
 
-
-
-
-function updateTxtLine() {
-    var elInputValue = document.querySelector('.text-input').value
+function drawTxts() {
     clearCanvas()
-    drawTxt(elInputValue)
-    gMeme.lines[gCurrLineIdx].txt = elInputValue
+    gMeme.lines.forEach((line) => {
+        drawTxt(line)
+    })
 }
 
 
-function drawTxt(text) {
-    gCurrLineIdx = gMeme.selectedLineIdx
-    var font = gMeme.lines[gCurrLineIdx].font
-    var stroke = gMeme.lines[gCurrLineIdx].stroke
-    var fontSize = gMeme.lines[gCurrLineIdx].size
-    var align = gMeme.lines[gCurrLineIdx].align
-    var color = gMeme.lines[gCurrLineIdx].color
-    var x = gMeme.lines[gCurrLineIdx].pos.x
-    var y = gMeme.lines[gCurrLineIdx].pos.y
+function drawTxt(line) {
+    var font = line.font
+    var stroke = line.stroke
+    var fontSize = line.size
+    var align = line.align
+    var color = line.color
+    var x = line.pos.x
+    var y = line.pos.y
     gCtx.lineWidth = 1
     gCtx.strokeStyle = stroke
     gCtx.fillStyle = color
     gCtx.font = fontSize + 'px ' + font
     gCtx.textAlign = align
-    gCtx.fillText(text, x, y)
-    gCtx.strokeText(text, x, y)
+    gCtx.fillText(line.txt, x, y)
+    gCtx.strokeText(line.txt, x, y)
 }
