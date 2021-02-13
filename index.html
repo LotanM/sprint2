@@ -113,7 +113,7 @@
 
             <button class="btn share-btn" onclick="shareMeme()">Share</button>
 
-            <button class="btn download-btn" onclick="downloadMeme()">Download</button>
+            <button class="btn download-btn" onclick="downloadMeme(this)" download="my-meme.jpg">Download</button>
 
         </div>
     </div>
@@ -123,7 +123,7 @@
     <script src="js/storage-service.js"></script>
     <script src="js/main-service.js"></script>
     <script src="js/meme-editor-controller.js"></script>
-    <script src="js/buttons-controller.js"></script>
+    <script src="js/buttons-controller.js" crossorigin="anonymous"></script>
     <script src="js/my-memes-controller.js"></script>
 </body>
 

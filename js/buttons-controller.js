@@ -41,7 +41,7 @@ function shareMeme() {
 
 }
 
-// function downloadMeme() {
-//     gMemes
-//     _saveMemesToStorage()
-// }
+function downloadMeme(elLink) {
+    var imgContent = gElCanvas.toDataURL('image/jpeg')
+    elLink.href = imgContent
+}
