@@ -10,6 +10,12 @@ function init() {
 }
 
 
+function toggleMenu() {
+    var mainMenu = document.querySelector('.main-menu-wrapper');
+    mainMenu.classList.toggle('open');
+}
+
+
 function renderGallery() {
     var gallery = gImgs
     var strHtmls = gallery.map(function (img) {
@@ -21,7 +27,6 @@ function renderGallery() {
 
 
 function renderModals(el) {
-    el.style.borderBottom = '3px solid pink'
     document.querySelector('.meme-editor-container').style.display = 'none'
     document.querySelector('.search-container').style.display = 'flex'
     if (el.className === 'gallery') {
@@ -39,5 +44,6 @@ function renderModals(el) {
         document.querySelector('.my-memes-container').style.display = 'none'
         document.querySelector('.image-gallery-container').style.display = 'none'
     }
+    toggleMenu()
     clearCanvas()
 }
