@@ -22,7 +22,6 @@ function moveTxtDown() {
 }
 
 function alignTxt(el) {
-    console.log(el.className);
     if (el.className === 'btn aleft') gMeme.lines[gMeme.selectedLineIdx].pos.x -= 30
     else if (el.className === 'btn acenter') gMeme.lines[gMeme.selectedLineIdx].pos.x = 220
     else if (el.className === 'btn aright') gMeme.lines[gMeme.selectedLineIdx].pos.x += 30
@@ -39,7 +38,6 @@ function addNewLine() {
         inputs[idx].value = gMeme.lines[idx].txt
     })
 }
-
 
 
 function toggleStroke(elBtn) {
@@ -59,11 +57,12 @@ function setCurrInput(currIdx) {
 }
 
 function shareMeme() {
-
+    
 }
 
 function downloadMeme(elLink) {
     var imgContent = gElCanvas.toDataURL()
     elLink.href = imgContent
+    console.log(elLink)
     elLink.download = 'myMeme'
 }

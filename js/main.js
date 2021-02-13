@@ -1,7 +1,6 @@
 'use strict'
 
 var gElCanvas;
-var gCurrLineIdx = 0;
 
 function init() {
     renderGallery()

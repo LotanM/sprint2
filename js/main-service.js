@@ -18,7 +18,7 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'lll',
+            txt: '',
             size: 50,
             align: 'center',
             color: 'black',
@@ -114,6 +114,7 @@ var gImgs = [{
 
 
 function createNewLine() {
+    var y = gMeme.lines[gMeme.lines.length - 1].pos.y + 50
     gMeme.lines.push(
         {
             txt: '',
@@ -122,7 +123,7 @@ function createNewLine() {
             color: 'black',
             font: 'Impact',
             stroke: 'white',
-            pos: { x: 220, y: 150 }
+            pos: { x: 220, y: y }
         }
     )
 }

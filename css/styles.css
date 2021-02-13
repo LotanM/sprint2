@@ -13,10 +13,11 @@ body {
     font-family: Impact, Arial, Helvetica, sans-serif;
     height: 60px;
     background-color: rgb(64, 64, 77);
+    border-radius: 20px;
 }
 
 .main-header>* {
-    margin: 0 60px
+    margin: 0 20px
 }
 
 .logo {
@@ -24,11 +25,6 @@ body {
     color: white;
     cursor: pointer;
 }
-
-/* .main-nav>* {
-    font-size: 20px;
-    margin-left: 50px;
-} */
 
 .grid-container {
     display: grid;
@@ -140,8 +136,7 @@ button {
     color: #fff;
     text-decoration: none;
     display: block;
-    line-height: 130px;
-    height: 130px;
+    /* line-height: 130px; */
     width: 8.4375rem;
     text-align: center;
     transition: .4s;
