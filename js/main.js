@@ -22,7 +22,6 @@ function renderGallery() {
     document.querySelector('.grid-container').innerHTML = strHtmls.join('');
 }
 
-
 function openEditorModal() {
     document.querySelector('.image-gallery-container').style.display = 'none'
     document.querySelector('.meme-editor-container').style.display = 'flex'

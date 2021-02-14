@@ -24,7 +24,7 @@ var gMeme = {
             color: 'black',
             font: 'Impact',
             stroke: 'white',
-            pos: { x: 220, y: 100 }
+            pos: { x: 300, y: 100 }
         },
         {
             txt: '',
@@ -33,7 +33,7 @@ var gMeme = {
             color: 'black',
             font: 'Impact',
             stroke: 'white',
-            pos: { x: 220, y: 150 }
+            pos: { x: 300, y: 150 }
         }
     ]
 }
@@ -123,7 +123,7 @@ function createNewLine() {
             color: 'black',
             font: 'Impact',
             stroke: 'white',
-            pos: { x: 220, y: y }
+            pos: { x: 300, y: y }
         }
     )
 }

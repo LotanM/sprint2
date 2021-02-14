@@ -1,30 +1,29 @@
-.control-box {
-    padding: 50px 0;
-    margin-left: 30px;
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #00000056;
-    border-radius: 30px;
-    min-width: 290px;
+input, select {
+    border-radius: 10px;
+    height: 40px;
 }
 
-input, select {
-    border-radius: 15px;
-    height: 40px;
-    margin-bottom: 5px;
-}
 .font-selection * {
-border-radius: 10px;
+    border-radius: 10px;
 }
+
+.font-selection {
+    width: 100%;
+}
+
 select {
     color: #c0392b;
-    font-size: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 option {
     font-size: 15px;
 }
 
 .btn {
-    font-size: 40px;
+    font-size: 30px;
     border-radius: 5px;
     color: white;
     text-decoration: none;
@@ -33,26 +32,40 @@ option {
 }
 
 .btn:hover {
-    color: #ffffff60
+    text-shadow: rgb(0 0 0) -1px 1px 1px, rgb(0 0 0) 1px 1px 1px, rgb(0 0 0) 1px -1px 1px, rgb(0 0 0) -1px -1px 1px, rgb(0 0 0) -1px 1px 1px, rgb(0 0 0) 1px 1px 1px, rgb(0 0 0) 1px -1px 1px, rgb(0 0 0) -1px -1px 1px;
+    color: white;
 }
 
-.control-box>* {
-    margin: 5px;
-    border-radius: 5px;
+.control-box>*:not(:first-child) {
+    margin-bottom: 5px;
 }
 
-.btns-container {
-    width: 90%;
-    margin-top: auto;
+.middle-btns-container {
+    width: 100%;
+    background-color: #8b3838;
 }
 
 .txt-inputs-container {
-    margin: 5px;
-    border-radius: 5px;
+    width: 100%;
+}
+
+.btns-section {
+    width: 100%;
+    margin-top: auto;
+}
+
+.btns-container {
+    background-color: #8b3838;
+    width: 49%;
+}
+
+.btns-container:hover, .middle-btns-container:hover {
+    background-color: #bb6565;
 }
 
 .text-input {
-    width: 90%;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .save-btn, .download-btn {
@@ -60,24 +73,16 @@ option {
     text-align: center;
     margin-top: auto;
     box-shadow: inset 0 -0.6em 0 -0.35em #23232b;
-    border: white solid 1px;
-    padding: 10px 20px;
+    padding: 7px 20px;
 }
 
 .save-btn:hover, .download-btn:hover {
-    box-shadow: inset 0 -0.6em 0 -0.35em rgb(85, 84, 84);
-    border-radius: 30px;
-    background-color: white;
-    color: #23232b;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgb(78, 40, 40);
+    border-radius: 10px;
+    background-color: #bb6565;
 }
 
-.stroke {
-    color: #81658d;
-}
 
-.font-select-form {
-    display: inline;
-}
 
 .light-outline {
     text-shadow: rgb(255 255 255) -1px 1px 1px, rgb(255 255 255) 1px 1px 1px, rgb(255 255 255) 1px -1px 1px, rgb(255 255 255) -1px -1px 1px, rgb(255 255 255) -1px 1px 1px, rgb(255 255 255) 1px 1px 1px, rgb(255 255 255) 1px -1px 1px, rgb(255 255 255) -1px -1px 1px;
@@ -89,24 +94,49 @@ option {
     color: white;
 }
 
-@media (max-width: 740px) {
-    .control-box {
-        margin-left: 0;
-        padding-top: 10px;
-    }
+.control-box {
+    padding: 50px 20px;
+    margin-left: 30px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #00000056;
+    border-radius: 30px;
+    width: 320px;
 }
 
-@media (max-width: 370px) {
+#my-canvas {
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    min-width: 450px;
+    min-height: 450px;
+}
+
+@media (max-width: 990px) {
     .control-box {
         margin-left: 0;
+        max-width: 600px;
         width: 100%;
-        padding-top: 10px;
+        height: 100%;
+    }
+    .btn {
+        font-size: 40px;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
     #my-canvas {
-        min-width:unset;
-        min-height:unset;
+        min-width: unset;
+        min-height: unset;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 330px) {
+    #my-canvas {
+        min-width: 250px;
+        min-height: 250px;
+        width: 100%;
+        height: 100%;
     }
 }

@@ -57,33 +57,37 @@
                 <input class="text-input" type="text" oninput="updateTxtLine(this.value)" onfocus="setCurrInput(0)">
                 <input class="text-input" type="text" oninput="updateTxtLine(this.value)" onfocus="setCurrInput(1)">
             </div>
-            <div class="btns-container">
-                <button class="btn add-btn" onclick="addNewLine()"><i class="fa fa-plus"></i></button>
-                <button class="btn delete-btn" onclick="deleteLine()"><i class="fa fa-trash"></i></button>
-                <button class="btn up-down-btn" onclick="moveTxtDown()"><i class="fa fa-arrow-down"></i></button>
-                <button class="btn up-down-btn" onclick="moveTxtUp()"><i class="fa fa-arrow-up"></i></button>
-                <br>
-                <button class="btn aleft" onclick="alignTxt(this)"><i class="fa fa-align-left"></i></button>
-                <button class="btn acenter" onclick="alignTxt(this)"><i class="fa fa-align-center"></i></button>
-                <button class="btn aright" onclick="alignTxt(this)"><i class="fa fa-align-right"></i></button>
-                <br>
-                <button class="btn decrease-btn" onclick="decreaseFontSize()"><i class="fa fa-font"></i>-</button>
-                <button class="btn increase-btn" onclick="increaseFontSize()"><i class="fa fa-font"></i>+</button>
-                <button class="btn stroke-btn" onclick="toggleStroke(this)"><i class="fa fa-font"></i></button>
-                <br>
-                    <select class="font-selection" id="select-font" onChange="fontChange(this.value)">
-                        <option value="Impact" style="font-family: Impact;">Impact</option>
-                        <option value="Ariel" style="font-family: Ariel;">Ariel</option>
-                        <option value="Ariel Black" style="font-family: Ariel Black;">Ariel Black</option>
-                        <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
-                        <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
-                    </select>
-            </div>
-            <div class="btns-container">
-                <a class="btn save-btn" onclick="saveToMyMemes()">Save</a>
-                <a class="btn download-btn" onclick="downloadMeme(this)">Download</a>
-            </div>
+            <select class="font-selection space-between" id="select-font" onChange="fontChange(this.value)">
+                <option value="Impact" style="font-family: Impact;">Impact</option>
+                <option value="Ariel" style="font-family: Ariel;">Ariel</option>
+                <!-- <option value="Ariel Black" style="font-family: Ariel Black;">Ariel Black</option> -->
+                <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
+                <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
+            </select>
+            <section class="btns-section flex space-between">
+                <div class="btns-container">
+                    <button class="btn add-btn" onclick="addNewLine()"><i class="fa fa-plus"></i></button>
+                    <button class="btn delete-btn" onclick="deleteLine()"><i class="fa fa-trash"></i></button>
+                </div>
+                <div class="btns-container">
+                    <button class="btn up-down-btn" onclick="moveTxtDown()"><i class="fa fa-arrow-down"></i></button>
+                    <button class="btn up-down-btn" onclick="moveTxtUp()"><i class="fa fa-arrow-up"></i></button>
+                </div>
+            </section>
+                <div class="middle-btns-container">
+                    <button class="btn aleft" onclick="alignTxt(this)"><i class="fa fa-align-left"></i></button>
+                    <button class="btn acenter" onclick="alignTxt(this)"><i class="fa fa-align-center"></i></button>
+                    <button class="btn aright" onclick="alignTxt(this)"><i class="fa fa-align-right"></i></button>
+                </div>
+                <div class="middle-btns-container">
+                    <button class="btn decrease-btn" onclick="decreaseFontSize()"><i class="fa fa-font"></i>-</button>
+                    <button class="btn increase-btn" onclick="increaseFontSize()"><i class="fa fa-font"></i>+</button>
+                    <button class="btn stroke-btn" onclick="toggleStroke(this)"><i class="fa fa-font"></i></button>
+                </div>
+            <a class="btn save-btn" onclick="saveToMyMemes()">Save</a>
+            <a class="btn download-btn" onclick="downloadMeme(this)">Download</a>
         </div>
+    </div>
     </div>
 
     <script src="js/main.js"></script>
