@@ -16,7 +16,7 @@ function toggleMenu() {
 function renderGallery() {
     var gallery = gImgs
     var strHtmls = gallery.map(function (img) {
-        return `<div class="gallery-item">
+        return `<div class="grid-item">
         <img src=${img.url} onclick="renderMemeEditor('${img.url}', ${img.id})" alt=""></div>`
     })
     document.querySelector('.grid-container').innerHTML = strHtmls.join('');
@@ -32,6 +32,7 @@ function openEditorModal() {
 function renderModals(el) {
     document.querySelector('.meme-editor-container').style.display = 'none'
     if (el.className === 'gallery') {
+        
         document.querySelector('.image-gallery-container').style.display = 'block'
         document.querySelector('.my-memes-container').style.display = 'none'
     }
@@ -39,7 +40,14 @@ function renderModals(el) {
         document.querySelector('.my-memes-container').style.display = 'block'
         document.querySelector('.image-gallery-container').style.display = 'none'
     }
-
+    
+    cleanInputs()
+    cleanTxts()
     toggleMenu()
     clearCanvas()
+}
+
+function cleanInputs() {
+    var elInputs = document.querySelectorAll('.text-input');
+    elInputs.forEach(input => input.value = '')
 }

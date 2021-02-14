@@ -3,7 +3,7 @@
     padding: 50px 0;
     margin-left: 30px;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #40404d;
+    background-color: #00000056;
     border-radius: 30px;
     min-width: 300px;
 }
@@ -24,16 +24,17 @@ input {
 }
 
 .btn:hover {
-    color: rgb(39, 39, 138)
-}
+color: rgba(255, 255, 255, 0.377)}
 
 .control-box>* {
     margin: 5px;
     border-radius: 5px;
 }
 
+
 .btns-container {
     width: 90%;
+    margin-top: auto;
 }
 
 .txt-inputs-container {
@@ -45,16 +46,25 @@ input {
 .text-input {
     width: 90%;
 }
-
-.download-btn {
+.save-btn, .download-btn {
+    font-size: 25px;
     text-align: center;
     margin-top: auto;
-    border: white solid 2px;
-    padding: 5px 10px;
+    box-shadow: inset 0 -0.6em 0 -0.35em #23232b;
+    border: white solid 1px;
+    padding: 10px 20px;
+}
+
+.save-btn:hover, .download-btn:hover {
+    box-shadow: inset 0 -0.6em 0 -0.35em rgb(85, 84, 84);
+    border-radius: 30px;
+    background-color: white;
+    color: #23232b;
+    
 }
 
 .stroke {
-    color: grey;
+    color: #81658d;
 }
 
 .font-select-form {

@@ -14,13 +14,14 @@
 <body onload="init()">
     <header>
         <section class="main-header flex align-center space-between">
-            <div class="logo flex-1">LøMeme</div>
+            <div class="logo flex-1">LøLMeme</div>
             <nav class="main-menu-wrapper">
                 <ul class="main-nav clean-list flex align-center">
                     <li><a class="gallery" href="#" onclick="renderModals(this)">Gallery</a></li>
-                    <li><a class="my-memes" href="#" onclick="renderModals(this)">My Memes</a></li>
+                    <li><a class="my-memes" style="animation-delay:0.07s"href="#" onclick="renderModals(this)">My Memes</a></li>
                 </ul>
-                <button class="toggle-menu-btn" onclick="toggleMenu()" alt="Open main menu"><img src="./icons/menu.png" alt=""></button>
+                <button class="toggle-menu-btn" onclick="toggleMenu()" alt="Open main menu"><img src="./icons/menu.png"
+                        alt=""></button>
                 <div class="toggle-menu-screen screen" onclick="toggleMenu()" alt="toggle main menu"></div>
             </nav>
     </header>
@@ -37,9 +38,8 @@
     <!-- MY MEMES MODAL -->
 
     <div class="my-memes-container">
-        <div class="grid-container">
-            <div>my</div>
-            <div>memes</div>
+        <div class="grid-container" id="my-memes">
+
         </div>
 
     </div>
@@ -57,20 +57,23 @@
                 <input class="text-input" type="text" oninput="updateTxtLine(this.value)" onfocus="setCurrInput(1)">
             </div>
             <div class="btns-container">
-            <button class="btn add-btn" onclick="addNewLine()"><i class="fa fa-plus"></i></button>
-            <button class="btn delete-btn" onclick="deleteLine()"><i class="fa fa-trash"></i></button>
-            <button class="btn up-down-btn" onclick="moveTxtDown()"><i class="fa fa-arrow-down"></i></button>
-            <button class="btn up-down-btn" onclick="moveTxtUp()"><i class="fa fa-arrow-up"></i></button>
-            <br>
-            <button class="btn aleft" onclick="alignTxt(this)"><i class="fa fa-align-left"></i></button>
-            <button class="btn acenter" onclick="alignTxt(this)"><i class="fa fa-align-center"></i></button>
-            <button class="btn aright" onclick="alignTxt(this)"><i class="fa fa-align-right"></i></button>
-            <br>
-            <button class="btn decrease-btn" onclick="decreaseFontSize()"><i class="fa fa-font"></i>-</button>
-            <button class="btn increase-btn" onclick="increaseFontSize()"><i class="fa fa-font"></i>+</button>
-            <button class="btn stroke-btn" onclick="toggleStroke(this)"><i class="fa fa-font"></i></button>
+                <button class="btn add-btn" onclick="addNewLine()"><i class="fa fa-plus"></i></button>
+                <button class="btn delete-btn" onclick="deleteLine()"><i class="fa fa-trash"></i></button>
+                <button class="btn up-down-btn" onclick="moveTxtDown()"><i class="fa fa-arrow-down"></i></button>
+                <button class="btn up-down-btn" onclick="moveTxtUp()"><i class="fa fa-arrow-up"></i></button>
+                <br>
+                <button class="btn aleft" onclick="alignTxt(this)"><i class="fa fa-align-left"></i></button>
+                <button class="btn acenter" onclick="alignTxt(this)"><i class="fa fa-align-center"></i></button>
+                <button class="btn aright" onclick="alignTxt(this)"><i class="fa fa-align-right"></i></button>
+                <br>
+                <button class="btn decrease-btn" onclick="decreaseFontSize()"><i class="fa fa-font"></i>-</button>
+                <button class="btn increase-btn" onclick="increaseFontSize()"><i class="fa fa-font"></i>+</button>
+                <button class="btn stroke-btn" onclick="toggleStroke(this)"><i class="fa fa-font"></i></button>
             </div>
-            <a class="btn download-btn" onclick="downloadMeme(this)">Download</a>
+            <div class="btns-container">
+                <a class="btn save-btn" onclick="saveToMyMemes()">Save</a>
+                <a class="btn download-btn" onclick="downloadMeme(this)">Download</a>
+            </div>
         </div>
     </div>
 

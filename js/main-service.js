@@ -134,6 +134,9 @@ function deleteSelectedLine() {
 }
 
 
+function cleanTxts() {
+    gMeme.lines.forEach(line => line.txt = '')
+}
 
 function _saveMemesToStorage() {
     saveToStorage(KEY, gMemes)

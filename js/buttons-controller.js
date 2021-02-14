@@ -70,6 +70,11 @@ function setCurrInput(currIdx) {
 function downloadMeme(elLink) {
     var imgContent = gElCanvas.toDataURL()
     elLink.href = imgContent
-    console.log(elLink)
     elLink.download = 'myMeme'
+}
+
+function saveToMyMemes() {
+    var img = new Image()
+    img.src = gElCanvas.toDataURL()
+    return `<div class="grid-item">${document.getElementById('my-memes').appendChild(img)}</div>`
 }
