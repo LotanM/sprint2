@@ -18,9 +18,11 @@
             <nav class="main-menu-wrapper">
                 <ul class="main-nav clean-list flex align-center">
                     <li><a class="gallery" href="#" onclick="renderModals(this)">Gallery</a></li>
-                    <li><a class="my-memes" style="animation-delay:0.07s"href="#" onclick="renderModals(this)">My Memes</a></li>
+                    <li><a class="my-memes" style="animation-delay:0.07s" href="#" onclick="renderModals(this)">My
+                            Memes</a></li>
                 </ul>
-                <button class="toggle-menu-btn bouncy" onclick="toggleMenu()" alt="Open main menu"><i class="fa fa-bars"></i></button>
+                <button class="toggle-menu-btn bouncy" onclick="toggleMenu()" alt="Open main menu"><i
+                        class="fa fa-bars"></i></button>
                 <div class="toggle-menu-screen screen" onclick="toggleMenu()" alt="toggle main menu"></div>
             </nav>
     </header>
@@ -47,7 +49,7 @@
 
     <div class="meme-editor-container space-between ">
         <div class="canvas-container">
-            <canvas id="my-canvas" height="450" width="450"></canvas>
+            <canvas id="my-canvas" height="600" width="600"></canvas>
         </div>
 
         <div class="control-box flex align-center column">
@@ -68,6 +70,14 @@
                 <button class="btn decrease-btn" onclick="decreaseFontSize()"><i class="fa fa-font"></i>-</button>
                 <button class="btn increase-btn" onclick="increaseFontSize()"><i class="fa fa-font"></i>+</button>
                 <button class="btn stroke-btn" onclick="toggleStroke(this)"><i class="fa fa-font"></i></button>
+                <br>
+                    <select class="font-selection" id="select-font" onChange="fontChange(this.value)">
+                        <option value="Impact" style="font-family: Impact;">Impact</option>
+                        <option value="Ariel" style="font-family: Ariel;">Ariel</option>
+                        <option value="Ariel Black" style="font-family: Ariel Black;">Ariel Black</option>
+                        <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
+                        <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
+                    </select>
             </div>
             <div class="btns-container">
                 <a class="btn save-btn" onclick="saveToMyMemes()">Save</a>

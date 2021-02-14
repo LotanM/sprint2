@@ -62,6 +62,13 @@ function updateTxtLine(value) {
 }
 
 
+function fontChange(value) {
+    document.querySelector('select').style.fontFamily = value
+    gMeme.lines[gMeme.selectedLineIdx].font = value
+    drawTxts()
+}
+
+
 function setCurrInput(currIdx) {
     gMeme.selectedLineIdx = currIdx
 }
