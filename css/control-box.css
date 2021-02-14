@@ -15,7 +15,7 @@ input {
 }
 
 .btn {
-    font-size: 30px;
+    font-size: 40px;
     border-radius: 5px;
     color: white;
     text-decoration: none;
@@ -24,13 +24,13 @@ input {
 }
 
 .btn:hover {
-color: rgba(255, 255, 255, 0.377)}
+    color: #ffffff60
+}
 
 .control-box>* {
     margin: 5px;
     border-radius: 5px;
 }
-
 
 .btns-container {
     width: 90%;
@@ -46,6 +46,7 @@ color: rgba(255, 255, 255, 0.377)}
 .text-input {
     width: 90%;
 }
+
 .save-btn, .download-btn {
     font-size: 25px;
     text-align: center;
@@ -60,7 +61,6 @@ color: rgba(255, 255, 255, 0.377)}
     border-radius: 30px;
     background-color: white;
     color: #23232b;
-    
 }
 
 .stroke {
@@ -74,5 +74,13 @@ color: rgba(255, 255, 255, 0.377)}
 @media (max-width: 740px) {
     .control-box {
         margin-left: 0;
+        padding-top: 10px;
+    }
+}
+@media (max-width: 370px) {
+    .control-box {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 10px;
     }
 }

@@ -40,7 +40,7 @@ function renderModals(el) {
         document.querySelector('.my-memes-container').style.display = 'block'
         document.querySelector('.image-gallery-container').style.display = 'none'
     }
-    
+    document.querySelector('.save-btn').innerText = 'Save'
     cleanInputs()
     cleanTxts()
     toggleMenu()

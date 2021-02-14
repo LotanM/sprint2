@@ -74,6 +74,7 @@ function downloadMeme(elLink) {
 }
 
 function saveToMyMemes() {
+    document.querySelector('.save-btn').innerText = 'Saved!'
     var img = new Image()
     img.src = gElCanvas.toDataURL()
     return `<div class="grid-item">${document.getElementById('my-memes').appendChild(img)}</div>`
