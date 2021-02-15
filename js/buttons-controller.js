@@ -4,12 +4,12 @@ const KEY = 'memes';
 
 
 function increaseFontSize() {
-    gMeme.lines[gMeme.selectedLineIdx].size += 15
+    gMeme.lines[gMeme.selectedLineIdx].size += 10
     drawTxts()
 }
 
 function decreaseFontSize() {
-    gMeme.lines[gMeme.selectedLineIdx].size -= 15
+    gMeme.lines[gMeme.selectedLineIdx].size -= 10
     drawTxts()
 }
 
