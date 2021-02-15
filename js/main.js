@@ -31,6 +31,7 @@ function openEditorModal() {
 
 function renderSavedMemes() {
     var memes = loadFromStorage(KEY)
+    if (!memes || !memes.length) return
     var strHtmls = memes.map(imgUrl => {
         var img = `<img src="${imgUrl}"/>`
           return `<div class="grid-item">${img}</div>`
