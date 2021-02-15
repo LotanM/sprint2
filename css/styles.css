@@ -33,6 +33,20 @@ body {
     gap: 10px
 }
 
+.my-memes-container {
+    display: none;
+}
+
+.my-memes-container .grid-container {
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-rows: 400px;
+}
+
+.my-memes-container .grid-container .grid-item:hover {
+    opacity: 1;
+    cursor: unset;
+}
+
 .grid-item {
     cursor: pointer;
     display: flex;
@@ -175,8 +189,10 @@ button {
         position: fixed;
         top: 0;
         right: 0;
+        margin: 0;
         z-index: 300;
-        background: linear-gradient(to right, #3a1313f3, #571515f3);
+        opacity: 0.99;
+        background: linear-gradient(to right, #512764, #681e16);
         height: 100vh;
         transition: transform 1s;
         transform: translate(120%, 0);
@@ -186,11 +202,12 @@ button {
     }
     .main-nav a {
         height: auto;
+        margin-top: 20px;
         line-height: 1;
-        padding: 20px 0;
+        padding: 30px 0;
         width: 60vw;
         border: none;
-        border-bottom: 2px solid #e75555;
+        border-bottom: 2px solid #cfcfcf;
         animation: none;
     }
     .main-nav a:hover {

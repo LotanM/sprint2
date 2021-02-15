@@ -6,6 +6,7 @@ function init() {
     renderGallery()
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
+    renderSavedMemes()
 }
 
 function toggleMenu() {
@@ -28,10 +29,20 @@ function openEditorModal() {
     document.querySelector('.my-memes-container').style.display = 'none'
 }
 
+function renderSavedMemes() {
+    var memes = loadFromStorage(KEY)
+    var strHtmls = memes.map(imgUrl => {
+        var img = `<img src="${imgUrl}"/>`
+          return `<div class="grid-item">${img}</div>`
+        })
+        document.getElementById('my-memes').innerHTML = strHtmls.join('')
+}
+
+
+
 function renderModals(el) {
     document.querySelector('.meme-editor-container').style.display = 'none'
     if (el.className === 'gallery') {
-        
         document.querySelector('.image-gallery-container').style.display = 'block'
         document.querySelector('.my-memes-container').style.display = 'none'
     }

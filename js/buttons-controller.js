@@ -1,7 +1,9 @@
 'use strict'
+var gMemes;
+const KEY = 'memes';
+
 
 function increaseFontSize() {
-    console.log();
     gMeme.lines[gMeme.selectedLineIdx].size += 15
     drawTxts()
 }
@@ -73,6 +75,13 @@ function setCurrInput(currIdx) {
     gMeme.selectedLineIdx = currIdx
 }
 
+function changetxtColor(elColorInput) {
+    elColorInput.addEventListener("input", function () {
+        gMeme.lines[gMeme.selectedLineIdx].color = elColorInput.value
+        drawTxts()
+    }, false);
+}
+
 
 function downloadMeme(elLink) {
     var imgContent = gElCanvas.toDataURL()
@@ -80,9 +89,19 @@ function downloadMeme(elLink) {
     elLink.download = 'myMeme'
 }
 
-function saveToMyMemes() {
-    document.querySelector('.save-btn').innerText = 'Saved!'
+function saveMeme() {
     var img = new Image()
     img.src = gElCanvas.toDataURL()
-    return `<div class="grid-item">${document.getElementById('my-memes').appendChild(img)}</div>`
+    _saveMemesToStorage(img.src)
+    renderSavedMemes()
+}
+
+function _saveMemesToStorage(imgSrc) {
+    document.querySelector('.save-btn').innerText = 'Saved!'
+    var memes = loadFromStorage(KEY)
+    if (!memes || !memes.length) memes = []
+    gMemes = memes
+    // gMemes = (!memes || !memes.length ? [] : memes)
+    gMemes.push(imgSrc)
+    saveToStorage(KEY, gMemes)
 }

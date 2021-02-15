@@ -82,7 +82,25 @@ option {
     background-color: #bb6565;
 }
 
+#primary_color {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+}
 
+#primary_color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#primary_color::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
 
 .light-outline {
     text-shadow: rgb(255 255 255) -1px 1px 1px, rgb(255 255 255) 1px 1px 1px, rgb(255 255 255) 1px -1px 1px, rgb(255 255 255) -1px -1px 1px, rgb(255 255 255) -1px 1px 1px, rgb(255 255 255) 1px 1px 1px, rgb(255 255 255) 1px -1px 1px, rgb(255 255 255) -1px -1px 1px;

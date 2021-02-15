@@ -2,8 +2,6 @@
 
 var gId = 1;
 var gImgs;
-var gMemes;
-const KEY = 'memes';
 
 var gKeywords = {
     'happy': 0,
@@ -114,7 +112,7 @@ var gImgs = [{
 
 
 function createNewLine() {
-    var y = gMeme.lines[gMeme.lines.length - 1].pos.y + 50
+    var y = (!gMeme.lines.length ? 100 : gMeme.lines[gMeme.lines.length - 1].pos.y + 50)
     gMeme.lines.push(
         {
             txt: '',
@@ -136,8 +134,4 @@ function deleteSelectedLine() {
 
 function cleanTxts() {
     gMeme.lines.forEach(line => line.txt = '')
-}
-
-function _saveMemesToStorage() {
-    saveToStorage(KEY, gMemes)
 }

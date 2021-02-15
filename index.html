@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/control-box.css">
-    <title>Ultimate Meme Editor</title>
+    <title>LølMeme 😺</title>
 </head>
 
 <body onload="init()">
@@ -40,7 +40,6 @@
 
     <div class="my-memes-container">
         <div class="grid-container" id="my-memes">
-
         </div>
 
     </div>
@@ -60,7 +59,6 @@
             <select class="font-selection space-between" id="select-font" onChange="fontChange(this.value)">
                 <option value="Impact" style="font-family: Impact;">Impact</option>
                 <option value="Ariel" style="font-family: Ariel;">Ariel</option>
-                <!-- <option value="Ariel Black" style="font-family: Ariel Black;">Ariel Black</option> -->
                 <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
                 <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
             </select>
@@ -84,12 +82,15 @@
                     <button class="btn increase-btn" onclick="increaseFontSize()"><i class="fa fa-font"></i>+</button>
                     <button class="btn stroke-btn" onclick="toggleStroke(this)"><i class="fa fa-font"></i></button>
                 </div>
-            <a class="btn save-btn" onclick="saveToMyMemes()">Save</a>
-            <a class="btn download-btn" onclick="downloadMeme(this)">Download</a>
+                <div class="middle-btns-container">
+                    <input type="color" id="primary_color" onclick="changetxtColor(this)" class="field-radio">
+                </div>
+                <a class="btn save-btn" onclick="saveMeme()">Save</a>
+                <a class="btn download-btn" onclick="downloadMeme(this)">Download</a>
+            </div>
         </div>
     </div>
-    </div>
-
+    
     <script src="js/main.js"></script>
     <script src="js/storage-service.js"></script>
     <script src="js/main-service.js"></script>
